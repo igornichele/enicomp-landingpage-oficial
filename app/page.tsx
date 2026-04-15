@@ -1,65 +1,220 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Bot,
+  Code2,
+  Cpu,
+  Database,
+  LineChart,
+  Smartphone,
+  Sparkles,
+  Workflow,
+  Zap,
+} from "lucide-react";
+
+const services = [
+  {
+    icon: Code2,
+    title: "Sistemas Web Sob Medida",
+    desc: "Aplicações rápidas e escaláveis em Next.js, React e Rails — do MVP ao produto em produção.",
+  },
+  {
+    icon: Bot,
+    title: "Automação com IA",
+    desc: "Agentes inteligentes aplicados a prospecção, atendimento e operações repetitivas.",
+  },
+  {
+    icon: Workflow,
+    title: "Integrações & APIs",
+    desc: "Conexão entre sistemas: CRM, ERP, WhatsApp, pagamentos e qualquer API de negócio.",
+  },
+  {
+    icon: Smartphone,
+    title: "Aplicativos Mobile",
+    desc: "Aplicativos nativos para iOS (Swift) e Android (Kotlin) e soluções cross-platform em React Native — performance, UX fluida e integração total com o backend.",
+  },
+  {
+    icon: LineChart,
+    title: "Dashboards & BI",
+    desc: "Visualização de dados em tempo real pra decisões rápidas e embasadas.",
+  },
+  {
+    icon: Database,
+    title: "Infraestrutura Cloud",
+    desc: "Deploy, monitoramento e escalabilidade em GCP, AWS e Vercel — com segurança e performance.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <main className="relative flex-1 overflow-hidden">
+      <div
+        className="pointer-events-none absolute inset-0 -z-10"
+        aria-hidden="true"
+      >
+        <div className="absolute -top-40 left-1/2 h-[600px] w-[1000px] -translate-x-1/2 rounded-full bg-gradient-to-br from-fuchsia-500/30 via-purple-500/20 to-cyan-500/20 blur-3xl" />
+        <div className="absolute bottom-0 right-0 h-[500px] w-[500px] translate-x-1/3 translate-y-1/3 rounded-full bg-cyan-500/10 blur-3xl" />
+        <div className="absolute top-1/2 left-0 h-[400px] w-[400px] -translate-x-1/3 rounded-full bg-fuchsia-500/10 blur-3xl" />
+      </div>
+
+      <header className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/logo-branca.png"
+            alt="Enicomp"
+            width={400}
+            height={120}
+            className="h-12 w-auto md:h-14"
+            priority
+          />
+        </Link>
+        <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
+          <a href="#expertise" className="transition hover:text-foreground">
+            Expertise
+          </a>
+          <a href="#sobre" className="transition hover:text-foreground">
+            Sobre
+          </a>
+        </nav>
+      </header>
+
+      <section className="mx-auto max-w-6xl px-6 pt-16 pb-24 text-center md:pt-24 md:pb-32">
+        <Badge
+          variant="outline"
+          className="mb-6 border-fuchsia-500/30 bg-fuchsia-500/10 text-fuchsia-300"
+        >
+          <Sparkles className="mr-1 h-3 w-3" /> Soluções em Tecnologia
+        </Badge>
+        <h1 className="mx-auto max-w-4xl text-balance text-4xl font-bold tracking-tight md:text-6xl lg:text-7xl">
+          Tecnologia que{" "}
+          <span className="bg-gradient-to-r from-fuchsia-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            resolve
+          </span>{" "}
+          problemas reais.
+        </h1>
+        <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-muted-foreground">
+          A Enicomp é uma casa de engenharia de software focada em sistemas
+          web, automações inteligentes e aplicação prática de IA.
+        </p>
+
+      </section>
+
+      <section id="expertise" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="mb-14 text-center">
+          <Badge
+            variant="outline"
+            className="mb-4 border-cyan-500/30 bg-cyan-500/10 text-cyan-300"
+          >
+            <Zap className="mr-1 h-3 w-3" /> Áreas de expertise
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
+            Conhecimento aplicado, ponta a ponta.
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Competências acumuladas em mais de uma década desenvolvendo
+            produtos digitais em ambientes de alta exigência.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((s) => (
+            <Card
+              key={s.title}
+              className="group relative overflow-hidden border-white/10 bg-white/[0.02] backdrop-blur transition hover:border-fuchsia-500/40 hover:bg-white/[0.04]"
+            >
+              <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-gradient-to-br from-fuchsia-500/20 to-cyan-500/20 opacity-0 blur-2xl transition group-hover:opacity-100" />
+              <CardContent className="relative p-6">
+                <div className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-gradient-to-br from-fuchsia-500/20 to-cyan-500/20 ring-1 ring-white/10">
+                  <s.icon className="h-5 w-5 text-fuchsia-300" />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold">{s.title}</h3>
+                <p className="text-sm text-muted-foreground">{s.desc}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section id="sobre" className="mx-auto max-w-6xl px-6 py-20">
+        <div className="grid items-center gap-12 md:grid-cols-2">
+          <div>
+            <Badge
+              variant="outline"
+              className="mb-4 border-purple-500/30 bg-purple-500/10 text-purple-300"
+            >
+              <Cpu className="mr-1 h-3 w-3" /> Sobre a Enicomp
+            </Badge>
+            <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
+              Engenharia moderna, foco em resultado.
+            </h2>
+            <p className="mt-5 text-muted-foreground">
+              A Enicomp une engenharia de software moderna com inteligência
+              artificial aplicada. Nossa atuação combina desenvolvimento
+              full-stack, automação de processos e infraestrutura em nuvem pra
+              entregar soluções completas.
+            </p>
+            <p className="mt-4 text-muted-foreground">
+              Atuamos com um princípio simples: tecnologia só tem valor quando
+              resolve um problema de negócio de verdade. Nosso foco é qualidade
+              técnica, clareza de comunicação e entregas que realmente fazem
+              diferença na operação.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-2">
+              {[
+                "Next.js",
+                "React",
+                "React Native",
+                "Swift",
+                "Kotlin",
+                "Rails",
+                "Python",
+                "TypeScript",
+                "IA / LLMs",
+                "GCP",
+                "AWS",
+                "Vercel",
+                "PostgreSQL",
+              ].map((t) => (
+                <Badge
+                  key={t}
+                  variant="secondary"
+                  className="bg-white/5 text-muted-foreground"
+                >
+                  {t}
+                </Badge>
+              ))}
+            </div>
+          </div>
+          <div className="relative mx-auto">
+            <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-fuchsia-500/30 via-purple-500/20 to-cyan-500/30 blur-3xl" />
+            <Image
+              src="/logo-branca.png"
+              alt="Enicomp logo"
+              width={500}
+              height={500}
+              className="mx-auto h-auto w-full max-w-sm drop-shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
+
+      <footer className="border-t border-white/10 py-10">
+        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 text-sm text-muted-foreground md:flex-row">
+          <Image
+            src="/logo-branca.png"
+            alt="Enicomp"
+            width={240}
+            height={72}
+            className="h-10 w-auto opacity-80"
+          />
+          <p>
+            © {new Date().getFullYear()} Enicomp — Soluções em Tecnologia.
+            Todos os direitos reservados.
+          </p>
+        </div>
+      </footer>
+    </main>
   );
 }
