@@ -130,7 +130,7 @@ export default function PropostaPage() {
           variant="outline"
           className="mb-6 border-fuchsia-500/30 bg-fuchsia-500/10 text-fuchsia-300"
         >
-          🌐 Sites para pequenos negócios
+          🌐 Presença digital profissional
         </Badge>
         <h1 className="text-balance text-4xl font-bold tracking-tight md:text-5xl">
           Tenha um site{" "}
