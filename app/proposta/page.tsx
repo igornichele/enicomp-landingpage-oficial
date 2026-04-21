@@ -18,6 +18,30 @@ export const metadata: Metadata = {
   title: "Proposta — Site Profissional para seu Negócio",
   description:
     "Site profissional sob medida para pequenos negócios. Criação a partir de R$ 297, domínio .com.br + hospedagem por R$ 59,90/mês. Sem fidelidade.",
+  openGraph: {
+    title: "Site profissional para o seu negócio — Enicomp",
+    description:
+      "Criamos, hospedamos e cuidamos do seu site. A partir de R$ 297 — sem fidelidade.",
+    url: "https://enicomp.com.br/proposta",
+    siteName: "Enicomp",
+    images: [
+      {
+        url: "/og-proposta.png",
+        width: 1200,
+        height: 630,
+        alt: "Enicomp — Site profissional para pequenos negócios",
+      },
+    ],
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Site profissional para o seu negócio — Enicomp",
+    description:
+      "Criamos, hospedamos e cuidamos do seu site. A partir de R$ 297 — sem fidelidade.",
+    images: ["/og-proposta.png"],
+  },
 };
 
 const features = [
