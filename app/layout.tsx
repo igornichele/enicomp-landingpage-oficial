@@ -17,7 +17,7 @@ const SITE_URL = "https://enicomp.com.br";
 const SITE_NAME = "Enicomp";
 const SITE_TITLE = "Enicomp — Soluções em Tecnologia";
 const SITE_DESCRIPTION =
-  "Casa de engenharia de software focada em sistemas web, aplicativos mobile (iOS, Android, React Native), automações com IA, integrações, dashboards e infraestrutura em nuvem.";
+  "Empresa de tecnologia especializada em desenvolvimento de sistemas web, aplicativos mobile (iOS, Android, React Native) e automações com inteligência artificial. Integrações, dashboards e infraestrutura em nuvem.";
 
 export const viewport: Viewport = {
   themeColor: "#0a0a0a",

@@ -95,8 +95,9 @@ export default function Home() {
           problemas reais.
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg text-muted-foreground">
-          A Enicomp é uma casa de engenharia de software focada em sistemas
-          web, automações inteligentes e aplicação prática de IA.
+          A Enicomp é uma empresa de tecnologia especializada em
+          desenvolvimento de sistemas web, aplicativos mobile e automações com
+          inteligência artificial.
         </p>
 
       </section>

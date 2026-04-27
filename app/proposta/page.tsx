@@ -80,13 +80,13 @@ const features = [
 const steps = [
   {
     n: "1",
-    title: "Você aprova a demonstração",
-    desc: "Mostramos um protótipo do seu site antes de qualquer pagamento. Gostou? Seguimos.",
+    title: "Você revisa e manda os ajustes",
+    desc: "A demonstração que você recebeu já é um protótipo do seu site. Você nos passa logo, cores preferidas, mudanças de texto, sugestões de domínio (.com.br) que gostaria e tudo o que quiser ajustar — aplicamos antes de seguir.",
   },
   {
     n: "2",
     title: "Fazemos o site completo",
-    desc: "Em até 5 dias úteis o site está pronto, com domínio .com.br registrado no seu nome.",
+    desc: "Antes de registrar, pesquisamos quais domínios .com.br com o nome do seu negócio ainda estão livres e enviamos as opções pra você escolher. Depois é só aprovar e em até 5 dias úteis o site fica pronto, com suas alterações aplicadas e domínio registrado no seu nome.",
   },
   {
     n: "3",
